@@ -19,16 +19,19 @@ export default function Home() {
         <h2 style={{ color: "#3b82f6" }}>🚀 PatchVault</h2>
 
         <div style={{ marginTop: "30px" }}>
-  <Link href="/browse">
-    <button style={btnPrimary}>Browse Patches →</button>
-  </Link>
+<button
+  style={btnPrimary}
+  onClick={() => window.location.href = "/browse"}
+>
+  Browse Patches
+</button>
 
-  <Link href="/upload">
-    <button style={btnSecondary}>Upload Patch</button>
-  </Link>
-</div>
-      </nav>
-
+<button
+  style={btnSecondary}
+  onClick={() => window.location.href = "/upload"}
+>
+  Upload Patch
+</button>
       {/* HERO */}
       <section style={{
         display: "flex",
