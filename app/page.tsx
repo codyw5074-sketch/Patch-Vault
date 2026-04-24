@@ -1,4 +1,5 @@
-  fontFamily: "Inter, sans-serif"
+import Link from "next/link";
+fontFamily: "Inter, sans-serif"
 export default function Home() {
   return (
     <main style={{
@@ -17,10 +18,15 @@ export default function Home() {
       }}>
         <h2 style={{ color: "#3b82f6" }}>🚀 PatchVault</h2>
 
-        <div>
-          <button style={btnGhost}>Login</button>
-          <button style={btnPrimary}>Sign Up</button>
-        </div>
+        <div style={{ marginTop: "30px" }}>
+  <Link href="/browse">
+    <button style={btnPrimary}>Browse Patches →</button>
+  </Link>
+
+  <Link href="/upload">
+    <button style={btnSecondary}>Upload Patch</button>
+  </Link>
+</div>
       </nav>
 
       {/* HERO */}
@@ -55,9 +61,9 @@ export default function Home() {
           </p>
 
           <div style={{ marginTop: "30px" }}>
-            <button style={btnPrimary}>Browse Patches →</button>
-            <button style={btnSecondary}>Upload Patch</button>
-          </div>
+          <Link href="/browse">
+  <button style={btnPrimary}>Browse Patches</button>
+</Link>
         </div>
 
         {/* IMAGE / MOCK VISUAL */}
