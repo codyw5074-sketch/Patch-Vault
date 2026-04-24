@@ -1,3 +1,4 @@
+  fontFamily: "Inter, sans-serif"
 export default function Home() {
   return (
     <main style={{
@@ -199,3 +200,53 @@ const cardImage = {
   borderRadius: "8px",
   marginBottom: "10px"
 };
+export default function Home() {
+  return (
+    <main>
+      {/* your UI code here */}
+    </main>
+  );
+}
+const btnPrimary = {
+  padding: "12px 20px",
+  background: "#3b82f6",
+  border: "none",
+  borderRadius: "8px",
+  color: "white",
+  marginRight: "10px",
+  cursor: "pointer",
+  transition: "0.2s"
+};
+<button
+  style={btnPrimary}
+  onMouseOver={(e) => e.currentTarget.style.opacity = "0.8"}
+  onMouseOut={(e) => e.currentTarget.style.opacity = "1"}
+></button>
+const patches = [
+  { name: "NYPD Tactical Unit", price: "$39.99" },
+  { name: "SWAT Team Patch", price: "$29.99" },
+  { name: "Sheriff Department", price: "$24.99" },
+];
+
+{patches.map((p, i) => (
+  <div key={i} style={card}>
+    <div style={cardImage}></div>
+    <h3>{p.name}</h3>
+    <p style={{ opacity: 0.6 }}>{p.price}</p>
+  </div>
+))}
+const card = {
+  padding: "20px",
+  background: "#020617",
+  border: "1px solid #1e293b",
+  borderRadius: "12px",
+  transition: "0.2s"
+};
+onMouseOver={(e) => {
+  e.currentTarget.style.transform = "translateY(-5px)";
+  e.currentTarget.style.boxShadow = "0 10px 30px rgba(59,130,246,0.3)";
+}}
+onMouseOut={(e) => {
+  e.currentTarget.style.transform = "translateY(0)";
+  e.currentTarget.style.boxShadow = "none";
+}}
